@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="329.0" prefWidth="680.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.alura.conversor.main.HelloController">
+   <children>
+      <Label layoutX="155.0" layoutY="25.0" prefHeight="22.0" prefWidth="419.0" text="Conversor de monedas a Pesos colombianos">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="13.0" layoutY="113.0" prefHeight="28.0" prefWidth="147.0" text="Nombre de la moneda" textAlignment="RIGHT" />
+      <TextField fx:id="valorPesos" alignment="CENTER" disable="true" layoutX="410.0" layoutY="115.0" promptText="\$ " />
+      <Label layoutX="13.0" layoutY="252.0" text="Cantidad a convertir" />
+      <Label layoutX="439.0" layoutY="87.0" prefHeight="18.0" prefWidth="113.0" text="Valor por unidad" textAlignment="CENTER" textOverrun="CLIP" />
+      <Spinner fx:id="cantidadConvertir" editable="true" layoutX="169.0" layoutY="247.0" prefHeight="26.0" prefWidth="133.0">
+         <valueFactory>
+            <SpinnerValueFactory.IntegerSpinnerValueFactory initialValue="1" max="1000000000" min="0" />
+         </valueFactory>
+      </Spinner>
+      <TextField fx:id="total" layoutX="415.0" layoutY="247.0" prefHeight="26.0" prefWidth="161.0" promptText="Valor total" />
+      <Label layoutX="479.0" layoutY="224.0" text="Total" />
+      <Button fx:id="refrescar" accessibleRoleDescription="Actuliza el precio si hay un cambio en la tasa" layoutX="588.0" layoutY="47.0" mnemonicParsing="false">
+     </Button>
+      <TextField fx:id="nombreMoneda" layoutX="169.0" layoutY="115.0" />
+      <!-- ListView para mostrar las sugerencias de autocompletado -->
+      <ListView fx:id="suggestionsListView" layoutX="169.0" layoutY="140.0" prefHeight="100.0" prefWidth="170.0" />
+      <Button fx:id="totalizar" layoutX="327.0" layoutY="248.0" mnemonicParsing="false" onAction="#calcularTotal" text="Totalizar" />
+   </children>
+</Pane>
