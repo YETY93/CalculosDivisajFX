@@ -1,6 +1,8 @@
 package com.alura.conversor.comun;
 
 import com.alura.conversor.entidad.Moneda;
+import com.alura.conversor.entidad.RespuestaApi;
+import com.google.gson.Gson;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -85,4 +87,11 @@ public class GestorMonedas {
         }
         return null;
     }
+
+    public double invertirACOP( double valorPeso){
+        double calculo = (1/valorPeso);
+        System.out.println(calculo);
+        return calculo ;
+    }
+
 }

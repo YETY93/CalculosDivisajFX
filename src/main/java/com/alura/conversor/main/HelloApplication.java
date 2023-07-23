@@ -15,7 +15,6 @@ public class HelloApplication extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
         Parent root = fxmlLoader.load();
         Scene scene = new Scene(root, 680, 300);
-
         scene.getStylesheets().add(BootstrapFX.bootstrapFXStylesheet());
 
         stage.setTitle("Conversor de monedas!");
