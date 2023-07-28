@@ -55,7 +55,6 @@ public class HelloController {
 
     @FXML
     public void initialize() {
-        inicializarEstilos();
         asignarimagen();
         crearMonedas = new CrearMonedas();
         gestorMonedas = new GestorMonedas(crearMonedas.instanciarMonedas());
@@ -183,12 +182,5 @@ public class HelloController {
             }
         });
     }
-
-    @FXML
-    public void inicializarEstilos(){
-        botonSalir.getStyleClass().add("btn");
-        botonSalir.getStyleClass().add("btn-primary");
-    }
-
 }
 
